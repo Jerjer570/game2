@@ -1,0 +1,20 @@
+{
+  "unityVersion": "2022.3 LTS+",
+  "renderPipeline": "HDRP",
+  "coordinateSystem": { "three": "right-handed, Y-up", "unity": "left-handed, Y-up", "note": "GLTFast otomatis meng-flip sumbu Z saat import" },
+  "level": { "tileSizeMeters": 3, "wallHeight": 3, "gridTiles": 21, "generator": "DFS maze + 6 ruang kelas 3x3 + loop acak", "seed": 11 },
+  "models": [
+    { "id": "entity", "path": "assets/models/Soldier.glb",     "scale": 1.2, "pivot": [0, 0, 0], "animations": ["Idle", "Walk", "Run"], "materialOverride": "black, emissive #1a0000" },
+    { "id": "chair",  "path": "assets/models/SheenChair.glb",  "scale": "fit height 0.9 m", "pivot": [0, 0, 0] },
+    { "id": "bottle", "path": "assets/models/WaterBottle.glb", "scale": "fit height 0.45 m", "pivot": [0, 0, 0] }
+  ],
+  "textures": [
+    { "id": "floorDiff",  "path": "assets/textures/hardwood2_diffuse.jpg",   "usage": "baseColor", "srgb": true,  "tiling": [21, 21] },
+    { "id": "floorBump",  "path": "assets/textures/hardwood2_bump.jpg",      "usage": "height",    "srgb": false, "tiling": [21, 21] },
+    { "id": "floorRough", "path": "assets/textures/hardwood2_roughness.jpg", "usage": "roughness", "srgb": false, "tiling": [21, 21] }
+  ],
+  "hdri": [],
+  "proceduralTextures": ["wallpaper kuning bergaris + keramik bawah", "plafon akustik", "papan nama ruangan"],
+  "animations": [ { "model": "entity", "clips": ["Idle", "Walk", "Run"], "controller": "EntityAnimator" } ],
+  "lighting": { "fog": "Exp2 #2f2a12 density 0.05", "ceilingPanels": "emissive, 80% menyala", "flashlight": "Spot 28m, angle 0.45, shadow", "toneMapping": "ACES", "postProcessing": ["GTAO", "Bloom", "ColorLUT kuning-hijau", "Grain+Vignette+ChromaticAberration (fear)", "SMAA"] }
+}

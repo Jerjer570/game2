@@ -1,0 +1,11 @@
+{
+  "generatedAt": "contoh — akan ditimpa oleh `npm run fetch-assets`",
+  "assets": [
+    { "id": "entity",     "type": "model",   "local": "assets/models/Soldier.glb",     "github": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/models/gltf/Soldier.glb", "sha256": "<diisi script>", "bytes": 0, "license": "cek repo three.js (Mixamo)" },
+    { "id": "chair",      "type": "model",   "local": "assets/models/SheenChair.glb",  "github": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/SheenChair/glTF-Binary/SheenChair.glb", "sha256": "<diisi script>", "bytes": 0, "license": "cek LICENSE.md (CC-BY 4.0 — perlu atribusi)" },
+    { "id": "bottle",     "type": "model",   "local": "assets/models/WaterBottle.glb", "github": "https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/WaterBottle/glTF-Binary/WaterBottle.glb", "sha256": "<diisi script>", "bytes": 0, "license": "CC0 (cek LICENSE.md)" },
+    { "id": "floorDiff",  "type": "texture", "local": "assets/textures/hardwood2_diffuse.jpg",   "github": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/hardwood2_diffuse.jpg", "sha256": "<diisi script>", "bytes": 0 },
+    { "id": "floorBump",  "type": "texture", "local": "assets/textures/hardwood2_bump.jpg",      "github": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/hardwood2_bump.jpg", "sha256": "<diisi script>", "bytes": 0 },
+    { "id": "floorRough", "type": "texture", "local": "assets/textures/hardwood2_roughness.jpg", "github": "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/hardwood2_roughness.jpg", "sha256": "<diisi script>", "bytes": 0 }
+  ]
+}

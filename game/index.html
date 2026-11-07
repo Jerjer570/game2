@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Backrooms Sekolah 3D</title>
+<style>
+  html,body{margin:0;height:100%;overflow:hidden;background:#0b0a05;font-family:system-ui,sans-serif;color:#f1eac0}
+  canvas{display:block;touch-action:none}
+  .ov{position:fixed;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:24px;z-index:10;background:#0b0a05ee}
+  #loading{display:flex;background:#0b0a05;transition:opacity .6s}
+  #bar{width:min(360px,70vw);height:8px;background:#2a2610;border-radius:4px;overflow:hidden}
+  #fill{height:100%;width:0;background:linear-gradient(90deg,#c9b955,#9fd36b);transition:width .15s}
+  button{font-size:18px;padding:12px 28px;border:2px solid #c9b955;background:#2a2610;color:#f1eac0;border-radius:6px;cursor:pointer}
+  button:hover{background:#3d3716}
+  h1{margin:0;letter-spacing:2px}
+  #hud{display:none;position:fixed;top:12px;left:12px;font-size:15px;text-shadow:0 1px 3px #000;z-index:5;line-height:1.6}
+  #stam{width:140px;height:6px;background:#ffffff22;border-radius:3px;overflow:hidden}
+  #stamFill{height:100%;width:100%;background:#9fd36b}
+  #hint{position:fixed;bottom:18px;left:0;right:0;text-align:center;font-size:16px;text-shadow:0 1px 4px #000;z-index:5;pointer-events:none}
+  #joy{position:fixed;left:24px;bottom:60px;width:120px;height:120px;border-radius:50%;background:#ffffff22;border:2px solid #ffffff55;z-index:6;touch-action:none;display:none}
+  #stick{position:absolute;left:35px;top:35px;width:50px;height:50px;border-radius:50%;background:#ffffffaa}
+  @media (pointer:coarse){#joy{display:block}}
+</style>
+</head>
+<body>
+<div id="loading" class="ov"><div id="ltext">Memuat asset dari GitHub…</div><div id="bar"><div id="fill"></div></div><div id="lsub" style="font-size:12px;opacity:.6"></div></div>
+
+<div id="start" class="ov">
+  <h1 id="startTitle">BACKROOMS SEKOLAH</h1>
+  <div style="max-width:440px;opacity:.85;line-height:1.5">Kamu terjebak di sekolah yang tak berujung. Kumpulkan <b>5 air almond</b>, lalu kabur lewat pintu <b>EXIT</b>. Jangan sampai <b>Siswa Bayangan</b> menemukanmu.<br><br>
+  WASD jalan • Shift lari (stamina) • F senter • Mouse lihat<br>Mobile: joystick + geser layar</div>
+  <button id="btn">Mulai</button>
+</div>
+
+<div id="end" class="ov"><h1 id="endTitle"></h1><div id="endText"></div><button id="retry">Main lagi</button></div>
+
+<div id="hud"><div>🧴 Air almond: <span id="bottles">0</span>/<span id="bottlesMax">5</span></div><div>⏱ <span id="time">0</span> dtk</div><div id="stam"><div id="stamFill"></div></div></div>
+<div id="hint"></div>
+<div id="joy"><div id="stick"></div></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

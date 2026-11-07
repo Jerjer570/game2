@@ -1,0 +1,19 @@
+{
+  "name": "backrooms-sekolah-3d",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "fetch-assets": "node scripts/fetch-assets.js"
+  },
+  "dependencies": {
+    "idb-keyval": "^6.2.1",
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
